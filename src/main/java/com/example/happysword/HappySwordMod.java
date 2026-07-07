@@ -1,9 +1,6 @@
 package com.example.happysword;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,11 +12,8 @@ public class HappySwordMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Happy Sword Mod initialized!");
 		HappySwordItems.register();
+		HappySwordTabs.register();
 		FlashEffectManager.initialize();
 		CowChaosManager.initialize();
-		
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-			content.addAfter(Items.NETHERITE_SWORD, HappySwordItems.HAPPY_SWORD);
-		});
 	}
 }
