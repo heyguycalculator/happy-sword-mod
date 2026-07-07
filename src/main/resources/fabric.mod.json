@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "happysword",
+  "version": "${version}",
+  "name": "Happy Sword",
+  "description": "A sword that makes your enemies experience pure chaos",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/happysword/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.happysword.HappySwordMod"]
+  },
+  "mixins": ["happysword.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-api": "*",
+    "minecraft": "1.20.1"
+  }
+}
